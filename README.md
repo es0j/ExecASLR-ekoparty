@@ -1,9 +1,3 @@
----
-title: Talk slides template
-tags: Templates, Talk
-description: View the slide with "Slide Mode".
----
-
 # ExecASLR - Abusing Intel branch predictors to bypass ASLR
 
 slide: https://docs.google.com/presentation/d/10t-oo-c26x9ydx1_FYgmhy204rxfmQ92eboPlCnA2y4/edit?usp=sharing
