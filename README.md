@@ -1,8 +1,5 @@
 # ExecASLR - Abusing Intel branch predictors to bypass ASLR
 
-slide: https://docs.google.com/presentation/d/10t-oo-c26x9ydx1_FYgmhy204rxfmQ92eboPlCnA2y4/edit?usp=sharing
-
-
 ## What is ASLR
 
 Address Space Layout Randomization is a mitigation used to make harder to exploit memory corruption attacks. In a scenario of a buffer overflow vulnerability, for example, an attacker that tries to make a Return Oriented Programing exploit needs to know the addresses of the gadgets in the chain. If the code segment of the exploited binary is randomized, then it's much harder for an attacker to pick the correct address for the exploit, making the exploitation unfeasible.
@@ -82,7 +79,9 @@ A faster option would be trying to "guess" the correct execution path. The CPU c
 The only problem in reverting the path taken is that the microarchitectural state of the CPU cannot be reverted. So if the CPU speculates to execute the instruction C (`mov dl,[rsi]`) the data pointed by `rsi` will be moved to the cache. This effect can be measured later using a side channel attack.
 
 ![](https://i.imgur.com/FwIv8Ux.png)
-*2 Bit conditional predictor. https://en.wikipedia.org/wiki/Branch_predictor*
+
+*2 Bit conditional predictor. 
+https://en.wikipedia.org/wiki/Branch_predictor*
 
 
 ## Spectre V2 (Branch Target Injection)
@@ -294,9 +293,12 @@ https://cos.ufrj.br/uploadfile/publicacao/3061.pdf
 ### Ekoparty talk:
 
 
-{%youtube Qj4z-KvnkxU %}
+https://www.youtube.com/watch?v=Qj4z-KvnkxU
 
-### References:
+### Slides:
+
+https://docs.google.com/presentation/d/10t-oo-c26x9ydx1_FYgmhy204rxfmQ92eboPlCnA2y4/edit?usp=sharing
+
 ### References:
 https://googleprojectzero.blogspot.com/2018/01/reading-privileged-memory-with-side.html
 https://eprint.iacr.org/2013/448.pdf
