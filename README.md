@@ -108,7 +108,7 @@ Some of these components are:
 - The Branch Target Buffer(BTB);
     - The BTB is a cache like component that stores the destinations for the predictions. The BTB Stores the full 64 bit address of the destination and the number of entries available on the BTB depends on the architecture.
 - The Branch History Buffer(BHB);
-    - The BHB stores a "hash" of the recent flow execution. Each branch instruction writes to the BHB. On skylake CPUs and before, the BHB can store the context of the last 29 branches. On icelake the BHB stores up to ~100 branches. Not that the BHB only uses the 20LSBs from the branches to create the hash, which 12 are not randomized.
+    - The BHB stores a "hash" of the recent flow execution. Each branch instruction writes to the BHB. On skylake CPUs and before, the BHB can store the context of the last 29 branches. On icelake the BHB stores up to ~100 branches. Note that the BHB only uses the 20LSBs from the branches to create the hash, which 12 are not randomized.
 - The Indirect predictor;
     - Uses only the 12 LSBs from the indirect branch instruction to determine the full 64 bit destination. Exec ASLR leaks the 64 bit pointer from the BTB to fully recover ASLR addresses.
 - The Direct branch predictor
